@@ -10,9 +10,18 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'icalendar'
+gem 'hpricot'
+gem 'feedzirra'
+gem 'pry'
+gem 'httparty'
+gem 'mechanize'
 
 group :doc do
   gem 'sdoc', require: false
+end
+
+group :development do
+  gem 'sqlite3'
 end
 
 # Use ActiveModel has_secure_password
