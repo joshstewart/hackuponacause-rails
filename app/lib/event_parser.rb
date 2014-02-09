@@ -1,12 +1,13 @@
 class EventParser
   
-  attr_accessor :guid, :title, :description, :date, :location, :start_date, :end_date, :long_description
+  attr_accessor :guid, :title, :description, :date, :location, :start_date, :end_date, :long_description, :category
   
   def initialize(event)
     self.guid = parse_guid(event.entry_id)
     self.title = clean_title(event.title)
     self.description = event.summary
     self.date = event.date
+    self.category = event.categories.first
     fetch_and_parse_ics(event.url)
   end
     

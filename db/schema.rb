@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209071731) do
+ActiveRecord::Schema.define(version: 20140209143255) do
 
   create_table "events", force: true do |t|
     t.string   "guid"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140209071731) do
     t.datetime "updated_at"
     t.string   "checksum"
     t.string   "area"
+    t.string   "category"
   end
 
 end
