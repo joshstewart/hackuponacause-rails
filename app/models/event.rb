@@ -2,6 +2,14 @@ class Event < ActiveRecord::Base
 
   before_save :event_hash
 
+  def url
+    "http://www.suwn.org/eventDetails.aspx?d=#{self.guid}"
+  end
+
+  def as_json(options={})
+    super.as_json(options).merge({:url => url})
+  end
+  
   protected
   
   def event_hash
